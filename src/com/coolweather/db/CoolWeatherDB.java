@@ -1,7 +1,6 @@
 package com.coolweather.db;
 
 import java.util.ArrayList;
-import java.util.Currency;
 import java.util.List;
 
 import com.coolweather.model.City;
@@ -12,7 +11,6 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.widget.ArrayAdapter;
 
 public class CoolWeatherDB {
 
@@ -142,7 +140,7 @@ public class CoolWeatherDB {
 		if (county!=null) {
 			ContentValues values=new ContentValues();
 			values.put("county_name", county.getCountyName());
-			values.put("county_code", county.getCoutnyCode());
+			values.put("county_code", county.getCountyCode());
 			values.put("city_id", county.getCityId());
 			db.insert("County", null, values);
 		}
